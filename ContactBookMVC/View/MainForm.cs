@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ContactBookMVC.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace ContactBookMVC.View
 {
     public partial class MainForm : Form
     {
+        ContactController contactController = new ContactController();
         public MainForm()
         {
             InitializeComponent();
+            this.listBox1.Items.AddRange(contactController.GetContacts().ToArray());
         }
     }
 }
