@@ -14,9 +14,24 @@ namespace ContactBookMVC.View
     public partial class MainForm : Form
     {
         ContactController contactController = new ContactController();
+
         public MainForm()
         {
             InitializeComponent();
+            UpdateList();
+        }
+
+        private void addContactLB_Click(object sender, EventArgs e)
+        {
+            
+            AddContactForm addContactForm = new AddContactForm();
+            addContactForm.ShowDialog();
+            this.contactController.AddContact(addContactForm.contact);
+            UpdateList();
+        }
+        private void UpdateList()
+        {
+            this.listBox1.Items.Clear();
             this.listBox1.Items.AddRange(contactController.GetContacts().ToArray());
         }
     }

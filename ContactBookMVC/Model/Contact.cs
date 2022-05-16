@@ -14,6 +14,7 @@ namespace ContactBookMVC.Model
             Surname = surname;
             Address = address;
             this.numbers = numbers;
+            Id = 0;
         }
         public Contact()
         {
@@ -21,16 +22,18 @@ namespace ContactBookMVC.Model
             Surname = string.Empty;
             Address = string.Empty;
             this.numbers = new List<string>();
+            Id = 0;
         }
 
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Address { get; set; }
+        public int Id { get; set; }
         public List<string> numbers { get; set; }
 
         public override string ToString()
         {
-            return String.Format("{0} {1}|{2}",this.Name,this.Surname,this.Address);
+            return String.Format("{0} {1} {2}|{3}",this.Id,this.Name,this.Surname,this.Address);
         }
     }
 }
