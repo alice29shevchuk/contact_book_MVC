@@ -17,6 +17,9 @@ namespace ContactBookMVC.Controller
         public ContactController()
         {
             this.contactsList = new List<Contact>();
+            //
+            //testData
+            //
             this.contactsList.Add(new Contact("Alice","Shevchuk","Topol 1",new List<string> { "0985486059"}));
             this.contactsList.Add(new Contact("Mark", "Shevchuk", "Topol 3", new List<string> { "09857854567" }));
         }
