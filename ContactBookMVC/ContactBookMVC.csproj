@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ContactController.cs" />
+    <Compile Include="Controller\WriteReadController.cs" />
     <Compile Include="Model\Contact.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,6 +63,18 @@
     <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ViewContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewContactForm.Designer.cs">
+      <DependentUpon>ViewContactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewContactUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewContactUserControl.Designer.cs">
+      <DependentUpon>ViewContactUserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,6 +89,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewContactForm.resx">
+      <DependentUpon>ViewContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewContactUserControl.resx">
+      <DependentUpon>ViewContactUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

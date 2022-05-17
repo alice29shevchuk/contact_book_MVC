@@ -38,6 +38,7 @@ namespace ContactBookMVC.View
             this.adressLB = new System.Windows.Forms.Label();
             this.numberLB = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameTB
@@ -107,7 +108,7 @@ namespace ContactBookMVC.View
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(227, 382);
+            this.button1.Location = new System.Drawing.Point(356, 382);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 41);
             this.button1.TabIndex = 8;
@@ -115,11 +116,22 @@ namespace ContactBookMVC.View
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Location = new System.Drawing.Point(112, 385);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(75, 35);
+            this.cancelBtn.TabIndex = 9;
+            this.cancelBtn.Text = "Назад";
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
             // AddContactForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 435);
+            this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.numberLB);
             this.Controls.Add(this.adressLB);
@@ -147,5 +159,7 @@ namespace ContactBookMVC.View
         private System.Windows.Forms.Label adressLB;
         private System.Windows.Forms.Label numberLB;
         private System.Windows.Forms.Button button1;
+        ViewContactUserControl userControl;
+        private System.Windows.Forms.Button cancelBtn;
     }
 }

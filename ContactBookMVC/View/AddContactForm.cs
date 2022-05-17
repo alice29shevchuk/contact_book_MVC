@@ -1,4 +1,5 @@
-﻿using ContactBookMVC.Model;
+﻿using ContactBookMVC.Controller;
+using ContactBookMVC.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,11 @@ namespace ContactBookMVC.View
         private void button1_Click(object sender, EventArgs e)
         {
             contact = new Contact(this.nameTB.Text,this.surnameTB.Text,this.addressTB.Text, new List<string> { this.numberTB.Text });
+            this.Close();
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

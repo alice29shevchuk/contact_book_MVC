@@ -10,6 +10,7 @@ namespace ContactBookMVC.Controller
     public class ContactController
     {
         private List<Contact> contactsList { get; set; }
+        WriteReadController writeReadController = new WriteReadController();
         public ContactController(List<Contact> contactsList)
         {
             this.contactsList = contactsList;
@@ -17,16 +18,16 @@ namespace ContactBookMVC.Controller
         public ContactController()
         {
             this.contactsList = new List<Contact>();
-            //
-            //testData
-            //
-            //this.contactsList.Add(new Contact("Alice","Shevchuk","Topol 1",new List<string> { "0985486059"}));
-            //this.contactsList.Add(new Contact("Mark", "Shevchuk", "Topol 3", new List<string> { "09857854567" }));
+            writeReadController.Read(this);
         }
         public void AddContact(Contact contact)
         {
-            contact.Id = this.contactsList.Count + 1;
-            contactsList.Add(contact);
+            if (contact != null)
+            {
+                contact.Id = this.contactsList.Count + 1;
+                contactsList.Add(contact);
+                writeReadController.Write(contactsList);
+            }
         }
         public void DeleteContact(Contact contact)
         {

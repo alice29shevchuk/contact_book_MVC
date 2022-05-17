@@ -33,7 +33,16 @@ namespace ContactBookMVC.Model
 
         public override string ToString()
         {
-            return String.Format("{0} {1} {2}|{3}",this.Id,this.Name,this.Surname,this.Address);
+            return String.Format("{0}|{1} {2}|{3}",this.Id,this.Name,this.Surname,this.Address);
+        }
+        public string GetInfoContact()
+        {
+            string s = String.Format("{0}|{1} {2}|{3}|", this.Id, this.Name, this.Surname, this.Address);
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                s += String.Format("{0}",numbers[i]);
+            }
+            return s;
         }
     }
 }
